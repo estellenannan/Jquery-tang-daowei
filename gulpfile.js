@@ -5,8 +5,8 @@ const htmlreplace = require('gulp-html-replace');
 const LessAutoprefix = require('less-plugin-autoprefix');
 const autoprefix = new LessAutoprefix({browsers: ['last 2 versions']});
 const open = require('open');
-const pkg = require('./package'); //引入package.json文件
-const jshintConfig = pkg.jshintConfig; //拿到package.json中的属性
+/*const pkg = require('./package'); //引入package.json文件*/
+/*const jshintConfig = pkg.jshintConfig; //拿到package.json中的属性*/
 
 //2. 配置/定义任务
 /*
@@ -16,7 +16,7 @@ const jshintConfig = pkg.jshintConfig; //拿到package.json中的属性
 gulp.task('jshint', function () { //语法检查的任务
 //任务的具体内容
   return gulp.src('src/js/*.js') //将指定文件加载到内存中（数据流）
-    .pipe($.jshint(jshintConfig)) //语法检查
+  /*.pipe($.jshint(jshintConfig)) //语法检查*/
     .pipe($.jshint.reporter('default')) //语法检查的报错规则
     .pipe($.connect.reload())
 })
@@ -92,7 +92,7 @@ gulp.task('html', function () {
     .pipe($.connect.reload())
 });
 
-gulp.task('template',function () {
+gulp.task('template', function () {
   return gulp.src('src/template/*.html')
     .pipe(gulp.dest('build/'))
     .pipe(gulp.dest('dist/'))
@@ -112,12 +112,12 @@ gulp.task('hotReload', ['default'], function () {
   gulp.watch('src/js/*.js', ['js']); //监听指定文件，一旦发生改变，就会启动后面的任务
   gulp.watch('src/less/*.less', ['css']);
   gulp.watch('src/*.html', ['html']);
-  gulp.watch('src/img/*.*',['imgmin']);
-  gulp.watch('src/template/*.html',['template']);
+  gulp.watch('src/img/*.*', ['imgmin']);
+  gulp.watch('src/template/*.html', ['template']);
 });
 
 //3. 应用任务
-gulp.task('default', ['js', 'imgmin', 'template','css', 'html']);
+gulp.task('default', ['js', 'imgmin', 'template', 'css', 'html']);
 //注册默认任务
 /*gulp.task('default', ['js', 'css', 'html']);*/
 gulp.task('myHotReload', ['default', 'hotReload']);

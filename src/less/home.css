@@ -1,0 +1,658 @@
+a {
+  text-decoration: none;
+  out-line: none;
+  color: #000;
+}
+body {
+  background: #fbf8f8;
+  color: #333;
+  font: 14px/1.14 "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", tahoma, arial, simsun, "宋体";
+}
+body,
+ul,
+li,
+i {
+  list-style: none;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
+  display: block;
+}
+*[hidden] {
+  display: none;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.clearFix:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.clearFix:before {
+  content: '';
+  display: table;
+  clear: both;
+}
+#app {
+  width: 100%;
+  min-width: 1200px;
+  height: 100%;
+  font-family: latoregular, Verdana, sans-serif;
+}
+#app .hdTransparent {
+  width: 100%;
+  height: 130px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #e5e5e5;
+}
+#app .hdTransparent.header-fixed {
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12);
+  background-color: rgba(255, 255, 255, 0.96);
+}
+#app .hdTransparent .topContainer {
+  height: 40px;
+  box-sizing: border-box;
+}
+#app .hdTransparent .topContainer .wrapUl {
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+#app .hdTransparent .topContainer .wrapUl .list {
+  float: right;
+  margin: 0;
+}
+#app .hdTransparent .topContainer .wrapUl .list .item {
+  float: left;
+  display: block;
+  color: black;
+  line-height: 40px;
+  padding: 0 15px;
+  cursor: pointer;
+}
+#app .hdTransparent .topContainer .wrapUl .list .item:hover {
+  color: #e94840;
+  background: #ffffff;
+}
+#app .hdTransparent .topContainer .wrapUl .list .item a.active {
+  color: #e94840;
+}
+#app .hdTransparent .topContainer .wrapUl .list .item a:hover {
+  color: #e94840;
+  transition: color 0.5s;
+}
+#app .hdTransparent .bottomContainer {
+  box-sizing: border-box;
+  width: 100%;
+  height: 90px;
+  background: #ffffff;
+}
+#app .hdTransparent .bottomContainer .bottomWrap {
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  box-sizing: border-box;
+  padding: 0 15px;
+}
+#app .hdTransparent .bottomContainer .bottomWrap .wrapLogo {
+  position: absolute;
+  left: 0;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#app .hdTransparent .bottomContainer .bottomWrap .wrapLogo a {
+  margin-left: 0;
+}
+#app .hdTransparent .bottomContainer .bottomWrap .wrapLogo a img {
+  vertical-align: middle;
+}
+#app .hdTransparent .bottomContainer .bottomWrap .search {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 100px;
+  right: 0;
+  width: 600px;
+  margin: auto;
+  height: 38px;
+  line-height: 38px;
+  border: 2px solid #e94840;
+  background-color: #fff;
+  border-radius: 4px;
+  font-size: 14px;
+}
+#app .hdTransparent .bottomContainer .bottomWrap .search .iconfont {
+  margin-left: 20px;
+  color: #999;
+  position: relative;
+  top: 1px;
+  font-weight: bold;
+  display: inline-block;
+  font-style: normal;
+  line-height: 1;
+}
+#app .hdTransparent .bottomContainer .bottomWrap .search .searchInput {
+  width: 70%;
+  border: none;
+  height: 30px;
+  outline: none;
+  padding-left: 10px;
+  font-weight: bold;
+  font-size: 15px;
+}
+#app .hdTransparent .bottomContainer .bottomWrap .search .searchbtn {
+  width: 20%;
+  text-align: center;
+  background-color: #e94840;
+  color: #fff;
+  float: right;
+  height: 38px;
+  cursor: pointer;
+  display: block;
+}
+#app .hdTransparent .bottomContainer .bottomWrap .rightEr {
+  position: absolute;
+  right: 18px;
+  top: 0;
+}
+#app .hdTransparent .bottomContainer .bottomWrap .rightEr .triangle {
+  border: 1px solid #ccc;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: -5px;
+  left: 40px;
+  background: #fff;
+  transform: rotate(45deg);
+  z-index: -1;
+}
+#app .hdTransparent .bottomContainer .bottomWrap .rightEr img {
+  width: 90px;
+  height: auto;
+  border: 1px solid #cccccc;
+  z-index: 1;
+}
+#app #carousel {
+  position: relative;
+}
+#app #carousel .wrap {
+  position: relative;
+}
+#app #carousel .wrap .fullBanner {
+  width: 100%;
+  position: relative;
+  height: 300px;
+  background: #FFF;
+  overflow: hidden;
+}
+#app #carousel .wrap .fullBanner .imgTwo {
+  margin: 0 auto;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+#app #carousel .wrap .fullBanner .imgTwo .list3 {
+  width: 1349px;
+  height: 300px;
+  position: relative;
+  background: lightcoral;
+}
+#app #carousel .wrap .fullBanner .imgTwo .list3 .item3 {
+  width: 1349px;
+  height: 300px;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  background-size: 1349px 300px;
+  background: url("../img/banner1.jpg") center center no-repeat;
+}
+#app #carousel .wrap .fullBanner .circle {
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+}
+#app #carousel .wrap .fullBanner .circle .circleWrap {
+  height: 100%;
+  padding-top: 5px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+#app #carousel .wrap .fullBanner .circle .circleWrap li {
+  display: inline-block;
+  zoom: 1;
+  cursor: pointer;
+  width: 10px;
+  height: 10px;
+  margin: 5px;
+  border-radius: 100%;
+  background: gray;
+  float: left;
+}
+#app #carousel .wrap .fullBanner .circle .circleWrap li.on {
+  background: #FFFFFF;
+}
+#app #carousel .wrap .smallBanner {
+  width: 200px;
+  position: relative;
+  margin: 0 auto;
+  z-index: 998;
+}
+#app #carousel .wrap .smallBanner .ulWrap {
+  width: 180px;
+  position: absolute;
+  left: -494px;
+  top: -302px;
+  height: 300px;
+}
+#app #carousel .wrap .smallBanner .ulWrap .list1 {
+  width: 180px;
+  background: #757881;
+  height: 300px;
+  margin-top: 2px;
+}
+#app #carousel .wrap .smallBanner .ulWrap .list1 .item1 {
+  color: #FFFFFF;
+  height: 30px;
+  line-height: 30px;
+  font-size: 16px;
+  position: relative;
+  font-weight: bold;
+  cursor: pointer;
+  padding-left: 45px;
+  transition: color 0.5s;
+}
+#app #carousel .wrap .smallBanner .ulWrap .list1 .item1 span {
+  letter-spacing: 2px;
+}
+#app #bigBox {
+  width: 100%;
+  padding-bottom: 20px;
+  background: #FFFFFF;
+}
+#app #bigBox .content {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 50px 0 0;
+  clear: both;
+}
+#app #bigBox .content .hd {
+  text-align: center;
+}
+#app #bigBox .content .hd span {
+  display: block;
+  font-family: "幼圆";
+}
+#app #bigBox .content .hd .sevriceTitle {
+  color: #3d3838;
+  font-weight: 800;
+  font-size: 28px;
+  font-family: "Microsoft YaHei";
+}
+#app #bigBox .content .hd .sevriceSelect {
+  color: #3d3838;
+  margin-top: 15px;
+}
+#app #bigBox .content .hd .sevriceSelect a {
+  background-color: transparent;
+  color: #3d3838;
+  font-size: 22px;
+}
+#app #bigBox .content .serviceDetail {
+  width: 1200px;
+}
+#app #bigBox .content .serviceDetail .tarNameS {
+  text-align: right;
+}
+#app #bigBox .content .serviceDetail .tarNameS .lookMore {
+  position: relative;
+  bottom: 22px;
+}
+#app #bigBox .content .serviceDetail .tarNameS .lookMore a {
+  color: #898989;
+  font-size: 18px;
+  font-family: "幼圆";
+}
+#app #bigBox .content .serviceDetail .moreImgdetail {
+  margin-top: 10px;
+  width: 1200px;
+  height: 345px;
+  box-sizing: border-box;
+}
+#app #bigBox .content .serviceDetail .moreImgdetail a {
+  position: relative;
+  margin-bottom: 0;
+  display: block;
+}
+#app #bigBox .content .serviceDetail .moreImgdetail a .serverBodey {
+  float: left;
+  padding: 10px;
+  width: 230px;
+  border: 1px solid #eaeaea;
+  margin: 0 5px;
+  background: #fff;
+  cursor: pointer;
+  height: 345px;
+  box-sizing: border-box;
+}
+#app #bigBox .content .serviceDetail .moreImgdetail a .serverBodey img {
+  vertical-align: middle;
+  width: 210px;
+  height: 210px;
+}
+#app #bigBox .content .serviceDetail .moreImgdetail a .serverBodey .serveName {
+  font-size: 16px;
+  padding-top: 7px;
+  box-sizing: border-box;
+  font-weight: 800;
+  color: #000;
+  height: 28px;
+  overflow: hidden;
+  width: 101%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+#app #bigBox .content .serviceDetail .moreImgdetail a .serverBodey .description {
+  color: #929292;
+  padding: 5px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  word-break: break-all;
+  font-size: 13px;
+  line-height: 18px;
+  height: 58px;
+  -webkit-box-orient: vertical;
+}
+#app #bigBox .content .serviceDetail .moreImgdetail a .serverBodey .price {
+  font-size: 14px;
+  padding: 0px 5px;
+  font-weight: 600;
+  height: 20px;
+  line-height: 20px;
+  color: #fb474f;
+}
+#app #bigBox .content .serviceDetail .moreImgdetail a .serverBodey .price .btn {
+  display: block;
+  float: right;
+  padding: 0;
+  width: 76px;
+  height: 24px;
+  line-height: 22px;
+  text-align: center;
+  background: #fb474f;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 14px;
+}
+#app #bigBox .content .introudce {
+  width: 1192px;
+  line-height: 32px;
+  padding: 10px;
+  border: 1px solid #e5e5e5;
+  margin: 20px auto 0;
+  text-align: justify;
+}
+#app #bigBox .content .introudce a {
+  margin: 0 6px;
+  color: #3d3838;
+}
+#app #bigBox:nth-child(odd) {
+  background: #FFFFFF;
+}
+#app .baozhang {
+  text-align: center;
+  width: 100%;
+  padding-top: 60px;
+  background: #fff;
+  clear: both;
+}
+#app .baozhang h2 {
+  font-size: 30px;
+  font-family: "微软雅黑";
+  font-weight: 800;
+}
+#app .baozhang h2 span {
+  color: #fb474f;
+}
+#app .baozhang p {
+  font-size: 22px;
+  color: #3d3838;
+  margin-top: 10px;
+}
+#app .service {
+  width: 100%;
+  padding-top: 20px;
+  background: #fff;
+  height: 66px;
+  font-family: "微软雅黑";
+}
+#app .service ul {
+  width: 420px;
+  margin: 0 auto;
+}
+#app .service ul li {
+  width: 33%;
+  float: left;
+  text-align: center;
+  color: #1d1515;
+  font-size: 18px;
+}
+#app .service ul li img {
+  margin-right: 10px;
+  vertical-align: middle;
+}
+#app .footer {
+  width: 100%;
+  clear: both;
+  padding-top: 25px;
+  height: 160px;
+  background: #fff;
+}
+#app .footer dl {
+  width: 1200px;
+  margin: 0 auto;
+}
+#app .footer dl dt {
+  float: left;
+  font-family: " 微软雅黑";
+  font-size: 18px;
+  font-weight: bold;
+}
+#app .footer dl dd {
+  margin-left: 30px;
+  width: 1090px;
+  line-height: 30px;
+  float: left;
+}
+#app .footer dl dd a {
+  font-size: 16px;
+  color: #898989;
+  display: inline-block;
+  width: 8%;
+  text-align: center;
+  font-weight: 200;
+  cursor: pointer;
+  font-family: "微软雅黑";
+}
+#app .beian {
+  width: 100%;
+  text-align: center;
+  padding-top: 50px;
+  clear: both;
+}
+#app .beian .htit {
+  position: relative;
+  bottom: 20px;
+  text-align: left;
+  font-weight: bold;
+  width: 1200px;
+  margin: 0 auto;
+  background: none;
+  color: #1d1515;
+  font-size: 18px;
+}
+#app .beian .hezuo {
+  width: 1200px;
+  margin: 0 auto;
+}
+#app .beian .hezuo li {
+  float: left;
+  width: 10%;
+  height: 60px;
+  text-align: center;
+  background: #fff;
+  margin-left: 1%;
+  line-height: 55px;
+  cursor: pointer;
+}
+#app .beian .hezuo li:first-child(1) {
+  margin-left: 0;
+}
+#app .beian .hezuo li img {
+  vertical-align: middle;
+}
+#app .beian2 {
+  height: 40px;
+  line-height: 40px;
+}
+#app .beian2 p {
+  color: #898989;
+  font-size: 14px;
+}
