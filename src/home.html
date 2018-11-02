@@ -2,26 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="baidu-site-verification" content="7uCVhIaDKW">
-  <meta content="telephone=no" name="format-detection">
-  <meta name="keywords" content="到位，到家，上门服务，家政服务，上门维修，上门按摩，搬家，北京家政服务，上海家政服务">
-  <meta name="description"
-        content="到位是中国领先的O2O上门服务平台，汇聚上万种高品质到家服务。家政服务，上门按摩，上门维修，搬家，一站直约，安心到家。现已覆盖北京，上海，深圳，广州，杭州等70多个城市。">
-  <title>到位APP - 高品质上门服务直约平台，家政服务，上门按摩，上门维修，搬家，安心到家！</title>
+ <title>到位APP - 高品质上门服务直约平台，家政服务，上门按摩，上门维修，搬家，安心到家！</title>
   <link rel="stylesheet" href="http://at.alicdn.com/t/font_882396_eam2k3hpbh.css">
-  <link rel="stylesheet" href="https://cdn.bootcss.com/Swiper/4.3.0/css/swiper.min.css">
   <link rel="shortcut icon" href="https://www.daoway.cn/pcimages/favicon.png">
   <link rel="stylesheet" href="./less/home.css">
+  <script src="js/template.js"></script>
   <script src="https://cdn.bootcss.com/jquery/1.3.2/jquery.min.js"></script>
-  <script>
-    var _hmt = _hmt || [];
-    (function () {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?b93926df513735d01a1d9cae0e543bde";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
 </head>
 <body>
 <div id="app">
@@ -116,126 +102,88 @@
     </div>
   </div>
 
-
   <!--家庭保洁 要多次遍历的-->
-  <div id="bigBox">
-    <div class="content">
-      <!--头部-->
-      <header class="hd">
-        <span class="sevriceTitle">家庭保洁</span>
-        <span class="sevriceSelect">
-          <a href="javascript:;"> 小时工</a>
-          <a href="javascript:;"> 深度保洁</a>
-          <a href="javascript:;"> 开荒保洁</a>
-          <a href="javascript:;"> 擦玻璃</a>
-          <a href="javascript:;"> 杀虫除螨</a>
-          <a href="javascript:;"> 家居养护</a>
-        </span>
-      </header>
-      <!--中间排列部分-->
-      <div class="serviceDetail">
-        <div class="tarNameS">
+  <div class="wrapMainBody">
+
+    <script type="text/html" id="serviceMain">
+      {{each data as value i}}
+      <div class="bigBox">
+        <div class="content">
+          <!--头部-->
+          <header class="hd">
+          <span class="sevriceTitle">
+           {{value.serviceIndex}}
+            </span>
+            <span class="sevriceSelect">
+              {{ each value.serviceType as item i}}
+                <a href="javascript:;" class="services"> {{item}}</a>
+              {{/each}}
+            </span>
+          </header>
+          <!--中间排列部分-->
+          <div class="serviceDetail">
+            <div class="tarNameS">
           <span class="lookMore">
             <a href="javascript:;">更多服务></a>
           </span>
-        </div>
-        <!--图片排列-->
-        <div class="moreImgdetail">
-          <a href="javascript:;">
-            <div class="serverBodey" style="box-sizing: border-box">
-              <img src="./img/1.jpg" alt="">
-              <div class="serveName">家庭保洁</div>
-              <div class="description">阿姨上门不带保洁工具，需用户自备工具；邻家阿姨上门保洁，2小时起订；【本服务...</div>
-              <div class="price">
-                <span style="font-size: 20px">25</span>
-                元/小时
-                <span class="btn">查看详情</span>
-              </div>
             </div>
-          </a>
-          <a href="javascript:;">
-            <div class="serverBodey" style="box-sizing: border-box">
-              <img src="./img/1.jpg" alt="">
-              <div class="serveName">家庭保洁</div>
-              <div class="description">阿姨上门不带保洁工具，需用户自备工具；邻家阿姨上门保洁，2小时起订；【本服务...</div>
-              <div class="price">
-                <span style="font-size: 20px">25</span>
-                元/小时
-                <span class="btn">查看详情</span>
-              </div>
+            <!--图片排列-->
+            <div class="moreImgdetail">
+              {{each value.shopList index i}}
+              <a href="javascript:;">
+                <div class="serverBodey" style="box-sizing: border-box">
+                  <img src="{{index.imgUrl}}" alt="">
+                  <div class="serveName">{{index.serviceName}}</div>
+                  <div class="description">{{index.description}}</div>
+                  <div class="price">
+                    <span style="font-size: 20px">{{index.price}}</span>
+                    元/小时
+                    <span class="btn">查看详情</span>
+                  </div>
+                </div>
+              </a>
+              {{/each}}
             </div>
-          </a>
-          <a href="javascript:;">
-            <div class="serverBodey" style="box-sizing: border-box">
-              <img src="./img/1.jpg" alt="">
-              <div class="serveName">家庭保洁</div>
-              <div class="description">阿姨上门不带保洁工具，需用户自备工具；邻家阿姨上门保洁，2小时起订；【本服务...</div>
-              <div class="price">
-                <span style="font-size: 20px">25</span>
-                元/小时
-                <span class="btn">查看详情</span>
-              </div>
-            </div>
-          </a>
-          <a href="javascript:;">
-            <div class="serverBodey" style="box-sizing: border-box">
-              <img src="./img/1.jpg" alt="">
-              <div class="serveName">家庭保洁</div>
-              <div class="description">阿姨上门不带保洁工具，需用户自备工具；邻家阿姨上门保洁，2小时起订；【本服务...</div>
-              <div class="price">
-                <span style="font-size: 20px">25</span>
-                元/小时
-                <span class="btn">查看详情</span>
-              </div>
-            </div>
-          </a>
-          <a href="javascript:;">
-            <div class="serverBodey" style="box-sizing: border-box">
-              <img src="./img/1.jpg" alt="">
-              <div class="serveName">家庭保洁</div>
-              <div class="description">阿姨上门不带保洁工具，需用户自备工具；邻家阿姨上门保洁，2小时起订；【本服务...</div>
-              <div class="price">
-                <span style="font-size: 20px">25</span>
-                元/小时
-                <span class="btn">查看详情</span>
-              </div>
-            </div>
-          </a>
+          </div>
+          <!--最下面的介绍-->
+          <div class="introudce">
+            <a href="/fuwushang?serviceId=b6148037439f4fe58b1b4ad450b3353d">实佳家政</a>
+            <a href="/fuwushang?serviceId=c0e8bb1a1bda47f69d8408d7432e7783">亿国家政</a>
+            <a href="/fuwushang?serviceId=dc8f33aaaded49bc9aedaac8a8a3a613">鑫天淼家政</a>
+            <a href="/fuwushang?serviceId=f24bcfa821464f88ab9b74c901a3af24">水净化除螨</a>
+            <a href="/fuwushang?serviceId=ff3aa7db63514925a8b267358b453354">叮当到家</a>
+            <a href="/fuwushang?serviceId=2050429d44e040048c65d91b75f77459">君达保洁</a>
+            <a href="/fuwushang?serviceId=212481a5ca8943c6bf4ac9bce5e158fc">如意管家</a>
+            <a href="/fuwushang?serviceId=46fe97b17a9d4334b00ebf94e56bcffc">合万家</a>
+            <a href="/fuwushang?serviceId=5d098a8062114c7cadee7cf0ad9bf41f">净美洁</a>
+            <a href="/fuwushang?serviceId=610789cef84e45a2acc9c358d65a58e9">速达客</a>
+            <a href="/fuwushang?serviceId=694669ed6474413c9217bbc422645427">宜诺康</a>
+            <a href="/fuwushang?serviceId=0344cd3a83894a6f88253832643e4ef4">奥美林保洁</a>
+            <a href="/fuwushang?serviceId=164cf695ccfc4253b0c62d3357dbc39a">阳光家政</a>
+            <a href="/fuwushang?serviceId=1915e5a5a4b2474a9da1fef2222403e6">佩奇家家政</a>
+            <a href="/fuwushang?serviceId=1b329971787c4ac3880d78030b7f9f72">爱家保洁</a>
+            <a href="/fuwushang?serviceId=1ca0b0db3d2440039b8da58e6028b0a3">美利清洁</a>
+            <a href="/fuwushang?serviceId=291bfd9fcae9403fa4b1318c14215c07">亦彩家政</a>
+            <a href="/fuwushang?serviceId=3838bd2e3b0f4b9a97028016b1ac3a13">海易达虫控</a>
+            <a href="/fuwushang?serviceId=452d083f57264d789ba7cc5fe3afa070">万泓保洁</a>
+            <a href="/fuwushang?serviceId=7921891c6c4547b18f1f7b21da7d5133">奥美达家政</a>
+            <a href="/fuwushang?serviceId=81cefca93cb6411985865ae83580202d">嘉欲保洁</a>
+            <a href="/fuwushang?serviceId=871207e184124c258991c6364966bdd3">汇鑫伟业</a>
+            <a href="/fuwushang?serviceId=a5e0ac0eea8a40fcaab1d8012552caf7">睿技家政</a>
+            <a href="/fuwushang?serviceId=acbc5da5835d4429ab2d61a53fd27f3b">洁奈尔</a>
+            <a href="/fuwushang?serviceId=b3ce7b4c9c1c47b9a335d5a4b3ed5800">即时刻</a>
+            <a href="/fuwushang?serviceId=b96ea0b6e2f74fccbb8c7da658dacad0">一刻钟生活服务</a>
+            <a href="/fuwushang?serviceId=c7f9cc2b40b14a4f9c3fb7c3040635d3">鑫达鸿信保洁</a>
+            <a href="/fuwushang?serviceId=d232eff9fbae43f6ad34fdd60f60e2c5">我擦保洁</a>
+          </div>
         </div>
       </div>
-      <!--最下面的介绍-->
-      <div class="introudce">
-        <a href="/fuwushang?serviceId=b6148037439f4fe58b1b4ad450b3353d">实佳家政</a>
-        <a href="/fuwushang?serviceId=c0e8bb1a1bda47f69d8408d7432e7783">亿国家政</a>
-        <a href="/fuwushang?serviceId=dc8f33aaaded49bc9aedaac8a8a3a613">鑫天淼家政</a>
-        <a href="/fuwushang?serviceId=f24bcfa821464f88ab9b74c901a3af24">水净化除螨</a>
-        <a href="/fuwushang?serviceId=ff3aa7db63514925a8b267358b453354">叮当到家</a>
-        <a href="/fuwushang?serviceId=2050429d44e040048c65d91b75f77459">君达保洁</a>
-        <a href="/fuwushang?serviceId=212481a5ca8943c6bf4ac9bce5e158fc">如意管家</a>
-        <a href="/fuwushang?serviceId=46fe97b17a9d4334b00ebf94e56bcffc">合万家</a>
-        <a href="/fuwushang?serviceId=5d098a8062114c7cadee7cf0ad9bf41f">净美洁</a>
-        <a href="/fuwushang?serviceId=610789cef84e45a2acc9c358d65a58e9">速达客</a>
-        <a href="/fuwushang?serviceId=694669ed6474413c9217bbc422645427">宜诺康</a>
-        <a href="/fuwushang?serviceId=0344cd3a83894a6f88253832643e4ef4">奥美林保洁</a>
-        <a href="/fuwushang?serviceId=164cf695ccfc4253b0c62d3357dbc39a">阳光家政</a>
-        <a href="/fuwushang?serviceId=1915e5a5a4b2474a9da1fef2222403e6">佩奇家家政</a>
-        <a href="/fuwushang?serviceId=1b329971787c4ac3880d78030b7f9f72">爱家保洁</a>
-        <a href="/fuwushang?serviceId=1ca0b0db3d2440039b8da58e6028b0a3">美利清洁</a>
-        <a href="/fuwushang?serviceId=291bfd9fcae9403fa4b1318c14215c07">亦彩家政</a>
-        <a href="/fuwushang?serviceId=3838bd2e3b0f4b9a97028016b1ac3a13">海易达虫控</a>
-        <a href="/fuwushang?serviceId=452d083f57264d789ba7cc5fe3afa070">万泓保洁</a>
-        <a href="/fuwushang?serviceId=7921891c6c4547b18f1f7b21da7d5133">奥美达家政</a>
-        <a href="/fuwushang?serviceId=81cefca93cb6411985865ae83580202d">嘉欲保洁</a>
-        <a href="/fuwushang?serviceId=871207e184124c258991c6364966bdd3">汇鑫伟业</a>
-        <a href="/fuwushang?serviceId=a5e0ac0eea8a40fcaab1d8012552caf7">睿技家政</a>
-        <a href="/fuwushang?serviceId=acbc5da5835d4429ab2d61a53fd27f3b">洁奈尔</a>
-        <a href="/fuwushang?serviceId=b3ce7b4c9c1c47b9a335d5a4b3ed5800">即时刻</a>
-        <a href="/fuwushang?serviceId=b96ea0b6e2f74fccbb8c7da658dacad0">一刻钟生活服务</a>
-        <a href="/fuwushang?serviceId=c7f9cc2b40b14a4f9c3fb7c3040635d3">鑫达鸿信保洁</a>
-        <a href="/fuwushang?serviceId=d232eff9fbae43f6ad34fdd60f60e2c5">我擦保洁</a>
-      </div>
-    </div>
+      {{/each}}
+    </script>
+
+
   </div>
+
 
   <!--到位服务保障-->
   <div class="baozhang" id="baozhang">
@@ -329,6 +277,20 @@
   </div>
 
 </div>
-<script type="text/javascript" src="./js/home.js"></script>
+
+<!--进行数据的动态获取-->
+
+
+<!--获取小时工 深度保洁 开荒保洁 擦玻璃 杀虫除螨 家居养护-->
+<script type="text/html" id="serviceNames">
+
+</script>
+
+<!--获取图片详情-->
+<script type="text/html" id="serviceDetails">
+
+</script>
+
 </body>
+<script type="text/javascript" src="./js/home.js"></script>
 </html>

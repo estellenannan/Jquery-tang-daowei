@@ -401,66 +401,69 @@ table {
 #app #carousel .wrap .smallBanner .ulWrap .list1 .item1 span {
   letter-spacing: 2px;
 }
-#app #bigBox {
+#app .wrapMainBody {
+  width: 100%;
+}
+#app .wrapMainBody .bigBox {
   width: 100%;
   padding-bottom: 20px;
   background: #FFFFFF;
 }
-#app #bigBox .content {
+#app .wrapMainBody .bigBox .content {
   width: 1200px;
   margin: 0 auto;
   padding: 50px 0 0;
   clear: both;
 }
-#app #bigBox .content .hd {
+#app .wrapMainBody .bigBox .content .hd {
   text-align: center;
 }
-#app #bigBox .content .hd span {
+#app .wrapMainBody .bigBox .content .hd span {
   display: block;
   font-family: "幼圆";
 }
-#app #bigBox .content .hd .sevriceTitle {
+#app .wrapMainBody .bigBox .content .hd .sevriceTitle {
   color: #3d3838;
   font-weight: 800;
   font-size: 28px;
   font-family: "Microsoft YaHei";
 }
-#app #bigBox .content .hd .sevriceSelect {
+#app .wrapMainBody .bigBox .content .hd .sevriceSelect {
   color: #3d3838;
   margin-top: 15px;
 }
-#app #bigBox .content .hd .sevriceSelect a {
+#app .wrapMainBody .bigBox .content .hd .sevriceSelect a {
   background-color: transparent;
   color: #3d3838;
   font-size: 22px;
 }
-#app #bigBox .content .serviceDetail {
+#app .wrapMainBody .bigBox .content .serviceDetail {
   width: 1200px;
 }
-#app #bigBox .content .serviceDetail .tarNameS {
+#app .wrapMainBody .bigBox .content .serviceDetail .tarNameS {
   text-align: right;
 }
-#app #bigBox .content .serviceDetail .tarNameS .lookMore {
+#app .wrapMainBody .bigBox .content .serviceDetail .tarNameS .lookMore {
   position: relative;
   bottom: 22px;
 }
-#app #bigBox .content .serviceDetail .tarNameS .lookMore a {
+#app .wrapMainBody .bigBox .content .serviceDetail .tarNameS .lookMore a {
   color: #898989;
   font-size: 18px;
   font-family: "幼圆";
 }
-#app #bigBox .content .serviceDetail .moreImgdetail {
+#app .wrapMainBody .bigBox .content .serviceDetail .moreImgdetail {
   margin-top: 10px;
   width: 1200px;
   height: 345px;
   box-sizing: border-box;
 }
-#app #bigBox .content .serviceDetail .moreImgdetail a {
+#app .wrapMainBody .bigBox .content .serviceDetail .moreImgdetail a {
   position: relative;
   margin-bottom: 0;
   display: block;
 }
-#app #bigBox .content .serviceDetail .moreImgdetail a .serverBodey {
+#app .wrapMainBody .bigBox .content .serviceDetail .moreImgdetail a .serverBodey {
   float: left;
   padding: 10px;
   width: 230px;
@@ -471,12 +474,12 @@ table {
   height: 345px;
   box-sizing: border-box;
 }
-#app #bigBox .content .serviceDetail .moreImgdetail a .serverBodey img {
+#app .wrapMainBody .bigBox .content .serviceDetail .moreImgdetail a .serverBodey img {
   vertical-align: middle;
   width: 210px;
   height: 210px;
 }
-#app #bigBox .content .serviceDetail .moreImgdetail a .serverBodey .serveName {
+#app .wrapMainBody .bigBox .content .serviceDetail .moreImgdetail a .serverBodey .serveName {
   font-size: 16px;
   padding-top: 7px;
   box-sizing: border-box;
@@ -488,7 +491,7 @@ table {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-#app #bigBox .content .serviceDetail .moreImgdetail a .serverBodey .description {
+#app .wrapMainBody .bigBox .content .serviceDetail .moreImgdetail a .serverBodey .description {
   color: #929292;
   padding: 5px 0;
   overflow: hidden;
@@ -500,7 +503,7 @@ table {
   height: 58px;
   -webkit-box-orient: vertical;
 }
-#app #bigBox .content .serviceDetail .moreImgdetail a .serverBodey .price {
+#app .wrapMainBody .bigBox .content .serviceDetail .moreImgdetail a .serverBodey .price {
   font-size: 14px;
   padding: 0px 5px;
   font-weight: 600;
@@ -508,7 +511,7 @@ table {
   line-height: 20px;
   color: #fb474f;
 }
-#app #bigBox .content .serviceDetail .moreImgdetail a .serverBodey .price .btn {
+#app .wrapMainBody .bigBox .content .serviceDetail .moreImgdetail a .serverBodey .price .btn {
   display: block;
   float: right;
   padding: 0;
@@ -521,7 +524,7 @@ table {
   color: #fff;
   font-size: 14px;
 }
-#app #bigBox .content .introudce {
+#app .wrapMainBody .bigBox .content .introudce {
   width: 1192px;
   line-height: 32px;
   padding: 10px;
@@ -529,11 +532,11 @@ table {
   margin: 20px auto 0;
   text-align: justify;
 }
-#app #bigBox .content .introudce a {
+#app .wrapMainBody .bigBox .content .introudce a {
   margin: 0 6px;
   color: #3d3838;
 }
-#app #bigBox:nth-child(odd) {
+#app .wrapMainBody .bigBox:nth-child(odd) {
   background: #FFFFFF;
 }
 #app .baozhang {

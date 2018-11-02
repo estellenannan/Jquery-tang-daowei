@@ -511,6 +511,9 @@ table {
   margin: 10px 25px 25px;
   font-size: 16px;
 }
+#wrapD .service-center .centerleft .commentDiv {
+  width: 960px;
+}
 #wrapD .service-center .centerleft .commentDiv .conmentss {
   width: 96%;
   border-bottom: 1px solid #e5e5e5;
@@ -579,7 +582,7 @@ table {
   clear: both;
   text-align: center;
 }
-#wrapD .service-center .centerleft .fenye2 .page {
+#wrapD .service-center .centerleft .fenye2 .pageup {
   width: 80px;
   height: 30px;
   line-height: 30px;
@@ -590,7 +593,21 @@ table {
   display: inline-block;
   margin: 50px 5px;
 }
-#wrapD .service-center .centerleft .fenye2 .page.active {
+#wrapD .service-center .centerleft .fenye2 .pageup.active {
+  color: #929292;
+}
+#wrapD .service-center .centerleft .fenye2 .pagedown {
+  width: 80px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 0;
+  font-size: 14px;
+  color: #121212;
+  border: 1px solid #e5e5e5;
+  display: inline-block;
+  margin: 50px 5px;
+}
+#wrapD .service-center .centerleft .fenye2 .pagedown.active {
   color: #929292;
 }
 #wrapD .service-center .centerleft .fenye2 .showPage {

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="./src/js/template.js"></script>
+</head>
+<body>
+
+<div id="content"></div>
+
+<script id="test" type="text/html">
+  <h1>{{title}}</h1>
+</script>
+
+<script type="text/javascript">
+  let data = {
+    title:"hello world"
+  };
+  let html = template("test",data);
+  document.getElementById('content').innerHTML = html;
+</script>
+
+</body>
+</html>
